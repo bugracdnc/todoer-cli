@@ -20,6 +20,7 @@ import (
 type Todoer struct {
 	Id          uuid.UUID `json:"id"`
 	Todo        string    `json:"todo"`
+	Done	    bool   `json:"done"`
 	UpdateDate  string    `json:"updateDate"`
 	CreatedDate string    `json:"createdDate"`
 }
@@ -46,7 +47,7 @@ var repo []Todoer
 
 // HTTP PARAMETERS
 const serverUrl = "http://192.168.1.241"
-const serverPort = 8080
+const serverPort = 8654
 const basePath = "/api/v1/todoer"
 
 //END HTTP PARAMETERS
